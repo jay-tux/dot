@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 [ -f ~/.zshrc ] && . ~/.zshrc
+xrdb ~/.Xresources
 xcompmgr -c &
 touchid=`xinput list | grep Touchpad | cut -d'=' -f2 | tr '\t' ' ' | cut -d' ' -f1`
 touchprop=`xinput list-props $touchid | grep 'Tapping Enabled (' | cut -d'(' -f2 | cut -d')' -f1`
